@@ -54,6 +54,152 @@
       float: right;
     }
 
+    .image-container img.hero-desktop {
+      height: 100%;
+    }
+
+    .image-container img.hero-mobile {
+      display: none;
+    }
+
+    .content {
+      margin-top: 5.5rem;
+    }
+
+    .content h1 {
+      color: var(--dark);
+      font-family: inherit;
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+      line-height: 3.5rem;
+    }
+
+    .content h1 span {
+      display: block;
+    }
+
+    .content h1 span.text-pink {
+      color: var(--red-light);
+      font-weight: 300;
+    }
+
+    .content p {
+      color: var(--red-light);
+      line-height: 1.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .form-group {
+      margin-top: 2.5rem;
+      height: 3rem;
+      position:relative;
+    }
+
+    .form-group input {
+      border: 1px solid var(--red-light);
+      border-radius: 2rem;
+      color: var(--red-light);
+      padding: 0.2rem 1.5rem;
+      height: 100%;
+      width: 100%;
+    }
+
+    .form-group button {
+      background: linear-gradient(90deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      border: 0;
+      border-radius: 2rem;
+      box-shadow: 0 5px 20px 3px hsl(0, 80%, 86%);
+      position: absolute;
+      height: 100%;
+      width: 5rem;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+
+    input::placeholder {
+      color: var(--red-light);
+    }
+
+    input:focus,
+    button:focus {
+      outline: none;
+    }
+
+    .text-error {
+      color: var(--red);
+      margin:0;
+      margin-top:0.5rem;
+      margin-left: 1rem;
+      text-align: left;
+    }
+
+    .text-success {
+      color: #44d838
+      margin: 0;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      text-align: left;
+    }
+
+    .icon-error {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5.8rem;
+      display: none;
+    }
+
+    @media screen and (max-width: 1020px) {
+      body {
+        background-color: var(--dark);
+      }
+
+      .clear-fix {
+        clear: both;
+      }
+
+      .container {
+        margin: 0;
+        height: auto;
+        /* width: 100%; */
+        min-width: 100%;
+        padding: 0 1rem;
+      }
+
+      .logo {
+        margin: 2rem 0;
+      }
+
+      .image-container {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .image-container img.hero-desktop {
+        display: none;
+      }
+
+      .image-container img.hero-mobile {
+        display: block;
+        width: 100%;
+      }
+
+      .content {
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 5rem 1rem;
+        text-align: center;
+      }
+
+      .content h1 {
+        font-size: 2.5rem;
+      }
+    }
 
     footer {
       text-align: center;
@@ -66,12 +212,61 @@
 </head>
 <body>
 
-  We're coming soon
+<div class="container d-flex-inline">
+  <div class="logo">
+    <img src="logo.svg" alt="logo" srcset="" />
+  </div>
+</div>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+<div class="image-container">
+  <img
+          src="hero-desktop.jpg"
+          class="hero-desktop"
+          alt="hero-desktop"
+          srcset=""
+  />
+  <img
+          src="hero-mobile.jpg"
+          class="hero-mobile"
+          alt="hero-mobile"
+          srcset=""
+  />
+</div>
 
-  Email Address
+<div class="container clear-fix">
+  <div class="content">
+    <h1>
+      <span class="text-pink">We're</span><span>Comming</span
+    ><span>Soon</span>
+    </h1>
+    <p>
+      Hello fellow shoppers! We're currently building our new fashion store,
+      Add your email below to stay up-to-date with announcements and our
+      launch deals.
+    </p>
+
+    <form action="#" method="post">
+      <div class="form-group">
+        <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+        />
+        <img
+                src="icon-error.svg"
+                class="icon-error"
+                alt="icon-error"
+                srcset=""
+        />
+        <button type="button" id="submit">
+          <img src="icon-arrow.svg" alt="icon-arrow" srcset="" />
+        </button>
+      </div>
+      <p class="text-error"></p>
+    </form>
+  </div>
+</div>
   
   <footer>
     <p class="attribution">
